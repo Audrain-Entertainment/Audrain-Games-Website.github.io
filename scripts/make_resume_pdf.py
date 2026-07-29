@@ -7,14 +7,17 @@ It reads README.md and writes KevinAudrain_Resume.pdf in the same folder.
 """
 
 import re
+from pathlib import Path
 
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, KeepTogether
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 
-input_path = 'README.md'
-out_path = 'KevinAudrain_Resume.pdf'
+root_dir = Path(__file__).resolve().parent.parent
+input_path = root_dir / 'README.md'
+out_path = root_dir / 'assets' / 'docs' / 'KevinAudrain_Resume.pdf'
+out_path.parent.mkdir(parents=True, exist_ok=True)
 
 with open(input_path, 'r', encoding='utf-8') as f:
     lines = [line.rstrip() for line in f]

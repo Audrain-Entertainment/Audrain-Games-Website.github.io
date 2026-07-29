@@ -1,65 +1,59 @@
-# Kevin Audrain
-**Senior Simulation Software Engineer | Navy Nuclear Veteran**
-*Hampton Roads, Virginia Metropolitan Area (Transitioning to Greater Philadelphia Area)*
+# Audrain Entertainment / Kevin Audrain Website
 
----
+This repository contains the static website for Audrain Entertainment and Kevin Audrain’s professional profile. The site is built with plain HTML and CSS and is designed to be easy to maintain and publish to GitHub Pages.
 
-## Summary
-Senior Software Engineer and Technical Lead specializing in the end-to-end architecture of Unity-based MRTS 3D training simulators. Backed by a 25-year foundation spanning zero-error Naval Nuclear operations and enterprise software delivery, I rescue under-scoped initiatives by building scalable simulation platforms, robust C#/.NET architectures, and automated CI/CD pipelines. Driven by extreme ownership throughout the engineering lifecycle, I am seeking remote or regional leadership roles to bridge the gap between rigorous operational requirements and agile simulation engineering.
+## What the site includes
 
----
+- A studio/home landing page for Audrain Entertainment
+- A professional history page for Kevin Audrain
+- A detailed resume page
+- An Android games page listing Google Play titles
+- An itch.io games page for published indie game links
+- A privacy policy page for the Android apps
 
-## Top Skills
-* **Unity Game Development**
-* **Simulation & Training Systems**
-* **CI/CD Automation**
-* **C# / .NET**
+## Current structure
 
----
+- pages/ — main HTML pages
+  - index.html — site home page
+  - pages/kevin.html — professional history
+  - pages/resume.html — detailed resume
+  - pages/android-games.html — Google Play games list
+  - pages/itch-games.html — itch.io page
+  - pages/privacy-policy.html — privacy policy
+- assets/ — site assets
+  - assets/images/ — logos and photos
+  - assets/css/ — stylesheet
+  - assets/docs/ — downloadable resume PDF
+- scripts/ — helper scripts
+  - scripts/make_resume_pdf.py — generates the PDF resume from README.md
 
-## Professional Experience
+## Notes on the current site
 
-### Long Wave Inc.
-**Senior Software Engineer** | *Nov 2024 – Present*
-* Led a distributed team of 6 to update a high-stakes MRTS 3D training simulator for E-6B aircraft maintenance, delivering a critical training platform for Navy personnel.
-* Architected the automated Bamboo CI/CD pipeline and modernized Unity/WPF interfaces to support diverse input methods.
+- The site is static and does not require a build step.
+- The root index.html is the site home page and links to the content pages in pages/.
+- The resume PDF is stored in assets/docs/KevinAudrain_Resume.pdf.
 
-### Mission Technologies, a division of HII
-**Senior Software Engineer** | *May 2022 – Oct 2024*
-* Delivered the shipboard Data Collection and Debrief application using C#, PostgreSQL, and Angular while modernizing CI/CD with Jenkinsfiles.
-* Maintained a critical Unity-based SaaS training app and launched the team’s first automated pipeline.
+## Updating content
 
-### CAE USA
-**Innovation Software Developer - VR/AR** | *Sept 2021 – May 2022*
-* Led technical evaluation and approval of VR/AR training simulators for USAF programs (F-15, A-10, AWACS).
-* Engineered synthetic task environments in Unity and Unreal to integrate diverse VAMR hardware.
+To update the site content:
 
-### General Dynamics Information Technology (GDIT)
-**Software Engineer for Curriculum Development** | *Mar 2020 – Sept 2021*
-* Led an under-scoped initiative to deliver four Unity-based MRTS applications and brought project stability with Jira and structured processes.
-* Directed the end-to-end 3D asset production pipeline, including physical LiDAR capture and environment authoring.
+- Edit the relevant HTML file in pages/
+- Update shared styling in assets/css/styles.css
+- Replace images in assets/images/ if needed
 
-### Audrain Entertainment
-**Game Developer** | *June 2018 – May 2021*
-* Owned the full SDLC for five commercial mobile games on Google Play using Unity and C#.
+## Generating the resume PDF
 
-### L3Harris Technologies
-**Project Lead - Continuous Operational and Maintenance Assessment** | *Aug 2019 – Feb 2020*
-* Served as site lead at the Mid-Atlantic Regional Maintenance Center on Naval Station Norfolk.
-* Modernized legacy Access/VBA workflow by introducing Git version control and collaboration practices.
+From the repository root, run:
 
-### US Navy
-**Navy Nuclear Veteran** | *Sept 1999 – Sept 2019 (20 Years)*
-* **Talent Development Manager (2017-2019):** Directed a 2-week leadership course for 600 students and transitioned curriculum to digital delivery.
-* **Nuclear Propulsion Plant Supervisor (2005-2017):** Managed maintenance schedules and led 11-person teams through zero-error at-sea operations.
-* **Nuclear Propulsion Plant Operator (1999-2005):** Performed reactor operations and supported shipboard power generation.
+```bash
+python scripts/make_resume_pdf.py
+```
 
----
-
-## Education
-* **MBA, Applied Computer Science** – Northcentral University; **Java Programmer** – Penn Foster Group; **BS, Nuclear Engineering Technology** – Thomas Edison State College; **Computer Engineering** – Old Dominion University; **Nuclear Power School** – Naval Nuclear Power Training Command (NNPTC)
-
----
+This generates the PDF at assets/docs/KevinAudrain_Resume.pdf.
 
 ## Contact
-**Email:** kevin@audrain.games | **LinkedIn:** [linkedin.com/in/kevin-audrain](https://www.linkedin.com/in/kevin-audrain) | **Portfolio:** [github.com/draino7n7](https://github.com/draino7n7) | **Website:** [audrain.games](https://audrain.games/)
+
+- Email: kevin@audrain.games
+- LinkedIn: https://www.linkedin.com/in/kevin-audrain
+- GitHub: https://github.com/draino7n7
+- Website: https://audrain.games/
