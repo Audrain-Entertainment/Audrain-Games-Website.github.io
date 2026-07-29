@@ -62,4 +62,4 @@ Senior Software Engineer and Technical Lead specializing in the end-to-end archi
 ---
 
 ## Contact
-**Email:** kevin_audrain@yahoo.com | **LinkedIn:** [linkedin.com/in/kevin-audrain](https://www.linkedin.com/in/kevin-audrain) | **Portfolio:** [github.com/draino7n7](https://github.com/draino7n7) | **Website:** [kevinaudrain.com](http://www.kevinaudrain.com/)
+**Email:** kevin@audrain.games | **LinkedIn:** [linkedin.com/in/kevin-audrain](https://www.linkedin.com/in/kevin-audrain) | **Portfolio:** [github.com/draino7n7](https://github.com/draino7n7) | **Website:** [audrain.games](https://audrain.games/)
