@@ -23,14 +23,9 @@ body {
     line-height: 1.7;
 }
 
-.container {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
-}
-
+.container,
 .page {
-    max-width: 900px;
+    max-width: 980px;
     margin: 0 auto;
     padding: 40px 20px 80px;
 }
@@ -62,12 +57,33 @@ section { margin-top: 56px; }
     margin: 0 -20px 16px;
 }
 
-.brand {
-    font-family: 'JetBrains Mono', monospace;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    color: var(--muted);
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 212, 255, 0.35);
+    box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1), 0 10px 24px rgba(0, 0, 0, 0.28);
+    object-fit: cover;
+    display: block;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.brand-link:hover .brand-logo {
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.15), 0 12px 28px rgba(0, 0, 0, 0.32);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 18px;
 }
 
 .top-nav a,
@@ -76,9 +92,23 @@ section { margin-top: 56px; }
     text-decoration: none;
 }
 
-.top-nav a { font-weight: 700; }
+.top-nav a {
+    font-weight: 700;
+}
 
-.top-nav a.resume-link {
+.top-nav a:hover,
+.nav a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.top-nav a.active,
+.nav a.active {
+    color: var(--accent-color);
+}
+
+.top-nav a.resume-link,
+.nav a.resume-link {
     display: inline-flex;
     align-items: center;
     padding: 8px 14px;
@@ -90,38 +120,57 @@ section { margin-top: 56px; }
     transition: background 160ms ease;
 }
 
-.top-nav a.resume-link:hover { background: rgba(255,255,255,0.14); }
-
-body.site-kevin .brand {
-    font-size: 0.98rem;
-    letter-spacing: 0.12em;
-}
-
-body.site-kevin .top-nav .nav-links {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0;
-}
-
-body.site-kevin .top-nav .nav-links a {
-    margin-left: 0;
-}
-
-body.site-kevin .top-nav .nav-links a + a::before {
-    content: "|";
-    color: var(--muted);
-    margin: 0 10px;
+.top-nav a.resume-link:hover,
+.nav a.resume-link:hover {
+    background: rgba(255,255,255,0.14);
 }
 
 a { color: var(--accent-color); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.hero {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 28px;
+.site-footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+.site-footer p {
+    margin: 0 0 8px;
+}
+
+.site-footer p:last-child {
+    margin-bottom: 0;
+}
+
+.page-subheader {
+    display: flex;
+    justify-content: flex-end;
+    margin: -10px 0 24px;
+}
+
+.page-subheader a {
+    display: inline-flex;
     align-items: center;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.24);
+    color: #e6f8ff;
+    font-weight: 700;
+}
+
+.page-subheader a:hover {
+    background: rgba(0, 212, 255, 0.16);
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
     padding: 28px;
     border: 1px solid var(--card-border);
     border-radius: 16px;
@@ -130,7 +179,13 @@ a:hover { text-decoration: underline; }
     animation: riseIn 900ms ease-out both;
 }
 
-body.site-home .hero { grid-template-columns: 160px 1fr; }
+body.site-kevin .hero {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
 body.site-resume .hero { display: block; border-radius: 18px; }
 
 .logo {
@@ -261,12 +316,18 @@ body.site-home .tagline {
 }
 
 .grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin-top: 28px;
 }
 
 .card-grid {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid .card {
+    width: 100%;
 }
 
 .card,
