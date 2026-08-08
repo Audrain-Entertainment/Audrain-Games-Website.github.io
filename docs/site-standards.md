@@ -14,7 +14,6 @@ This site should feel like one cohesive experience across every page.
   - Home
   - Android
   - Itch
-  - About Me
 - Use the shared stylesheet in assets/css/styles.css.
 
 ## Footer requirements
