@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetterLogic - A Strategic Word Puzzle</title>
+    <script>
+        // If the user is on an Android device, immediately redirect them to the Google Play Store
+        if (/Android/i.test(navigator.userAgent)) {
+            window.location.replace("https://play.google.com/store/apps/details?id=games.audrain.letterlogic");
+        }
+    </script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100dvh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            width: 100%;
+            max-width: 500px;
+        }
+        .game-wrapper {
+            width: 100%;
+            width: 100%; max-width: 405px;
+            height: 740px; max-height: 85vh;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background-color: #000000;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+        }
+        .icon-link {
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .icon-link:hover {
+            transform: scale(1.05);
+        }
+        .play-badge {
+            height: 60px;
+            width: auto;
+        }
+        .audrain-icon {
+            height: 44px;
+            width: 44px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            color: #94a3b8;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- THE ITCH.IO GAME EMBED -->
+        <div class="game-wrapper">
+            <!-- PASTE YOUR ITCH.IO IFRAME CODE HERE, REPLACING THIS TEMPLATE IFRAME -->
+            <iframe frameborder="0" src="https://itch.io/embed-upload/19308471?color=121212" allowfullscreen="" width="405" height="740"><a href="https://audraingames.itch.io/letterlogic">Play LetterLogic on itch.io</a></iframe>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div class="buttons-container">
+            <a href="https://play.google.com/store/apps/details?id=games.audrain.letterlogic" class="icon-link" aria-label="Get it on Google Play">
+                <img src="../../assets/images/google-play-badge.png" alt="Get it on Google Play" class="play-badge">
+            </a>
+            <a href="../../index.html" class="icon-link" aria-label="Visit Audrain Games">
+                <img src="../../assets/images/favicon.png" alt="Audrain Games" class="audrain-icon">
+            </a>
+        </div>
+        
+        <p>LetterLogic is completely free and open-source.</p>
+    </div>
+</body>
+</html>
+
